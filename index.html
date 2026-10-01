@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حلول واجبات | أبحاث • اختبارات لطلاب الجامعات السعودية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#070b2e; --navy2:#0d144d; --navy3:#16207a;
+--gold:#d4af37; --gold-light:#f6dc7d; --gold-pale:#fff3c4;
+--white:#fff; --muted:#a8b0d6;
+}
+body{font-family:'Cairo','Tajawal',sans-serif;background:var(--navy);color:white;overflow-x:hidden;line-height:1.8}
+a{text-decoration:none;color:inherit}
+/* pattern */
+.pattern{position:fixed;inset:0;opacity:.07;pointer-events:none;z-index:0;
+background-image:url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 10 L70 50 L110 60 L70 70 L60 110 L50 70 L10 60 L50 50 Z' fill='none' stroke='%23d4af37' stroke-width='1'/%3E%3C/svg%3E");}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(7,11,46,.85);backdrop-filter:blur(15px);border-bottom:1px solid rgba(212,175,55,.25)}
+.nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px}
+.logo-icon{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #2a37a0, #070b2e);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:22px;box-shadow:0 0 20px rgba(212,175,55,.5)}
+.logo small{display:block;font-size:12px;color:var(--muted);font-weight:500}
+.links{display:flex;gap:24px;font-weight:600;font-size:15px}
+.links a:hover{color:var(--gold-light)}
+.btn-gold{background:linear-gradient(135deg,#b8912a,#f6dc7d 50%,#b8912a);color:#1a1400!important;font-weight:800;padding:11px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 8px 25px rgba(212,175,55,.4);transition:.3s;display:inline-flex;align-items:center;gap:8px}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(212,175,55,.6)}
+.btn-outline{border:1.5px solid var(--gold);color:var(--gold-pale)!important;padding:10px 26px;border-radius:50px;font-weight:700}
+/* hero */
+.hero{position:relative;max-width:1200px;margin:auto;padding:50px 20px 30px;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;z-index:1}
+@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.links{display:none}}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.4);color:var(--gold-light);padding:7px 18px;border-radius:50px;font-size:14px;font-weight:700;margin-bottom:18px}
+.badge .dot{width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 10px #22c55e;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.hero h1{font-size:clamp(32px,5vw,58px);font-weight:900;line-height:1.4;margin-bottom:10px}
+.hero h1 .gold{background:linear-gradient(180deg,#fff3c4,#f6dc7d 45%,#d4af37);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 40px rgba(212,175,55,.3)}
+.hero p.sub{color:#cbd1f2;font-size:18px;margin:12px 0 24px}
+.hero p.sub strong{color:var(--gold-light)}
+.features-mini{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+.mini{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:8px 16px;border-radius:12px;font-size:14px;display:flex;gap:8px;align-items:center}
+.mini i{color:var(--gold)}
+.cta-row{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap}
+.trust{display:flex;gap:20px;margin-top:22px;color:var(--muted);font-size:14px}
+.trust b{color:white;font-size:18px;display:block}
+/* visual - realistic desk */
+.visual{position:relative;height:560px;display:flex;align-items:center;justify-content:center}
+.neon-circle{position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle at 50% 40%, #1e2a9a 0%, #0d144d 55%, #070b2e 70%);border:3px solid transparent;background-clip:padding-box;box-shadow:0 0 0 3px #d4af37,0 0 60px rgba(212,175,55,.6),0 0 120px rgba(80,60,255,.5),inset 0 0 80px rgba(0,0,0,.6)}
+.neon-circle::before{content:'';position:absolute;inset:-12px;border-radius:50%;border:2px solid rgba(130,100,255,.6);filter:blur(1px)}
+.desk-card{position:relative;z-index:2;width:100%;max-width:420px;background:linear-gradient(180deg,rgba(25,33,110,.9),rgba(10,14,60,.95));border:1px solid rgba(212,175,55,.35);border-radius:22px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.6);backdrop-filter:blur(10px)}
+.desk-card .laptop{width:100%;height:190px;background:#0a0f35;border-radius:12px;border:1px solid #2a357a;overflow:hidden;position:relative}
+.laptop-screen{padding:14px}
+.bar{height:8px;border-radius:5px;background:#2a357a;margin-bottom:8px}
+.chart{display:flex;align-items:end;gap:6px;height:90px;margin-top:12px;background:rgba(255,255,255,.04);border-radius:10px;padding:10px}
+.chart span{flex:1;background:linear-gradient(180deg,var(--gold-light),var(--gold));border-radius:4px;min-height:20px}
+.float1,.float2,.float3{position:absolute;background:rgba(15,22,90,.92);border:1px solid rgba(212,175,55,.4);border-radius:16px;padding:12px 16px;box-shadow:0 15px 40px rgba(0,0,0,.5);z-index:3;font-size:13px;font-weight:700;display:flex;gap:10px;align-items:center;animation:float 4s ease-in-out infinite}
+.float1{top:30px;right:-10px} .float2{bottom:120px;left:-15px;animation-delay:1s} .float3{bottom:20px;right:20px;animation-delay:2s}
+.float1 i,.float2 i,.float3 i{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),#8a6d1b);color:white}
+@keyframes float{50%{transform:translateY(-10px)}}
+/* marquee unis */
+.unis{background:rgba(0,0,0,.3);border-top:1px solid rgba(212,175,55,.2);border-bottom:1px solid rgba(212,175,55,.2);padding:14px 0;overflow:hidden;white-space:nowrap;position:relative;z-index:1}
+.unis span{display:inline-block;margin:0 22px;color:var(--gold-pale);font-weight:700;font-size:15px;opacity:.9}
+/* services */
+.section{max-width:1200px;margin:auto;padding:60px 20px;position:relative;z-index:1}
+.sec-head{text-align:center;margin-bottom:36px}
+.sec-head h2{font-size:clamp(26px,3.5vw,40px);font-weight:900}
+.sec-head h2 span{color:var(--gold-light)}
+.sec-head p{color:var(--muted);max-width:600px;margin:8px auto}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.visual{height:480px}.neon-circle{width:320px;height:320px}}
+@media(max-width:550px){.grid4{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,rgba(30,40,130,.55),rgba(10,15,65,.9));border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px 22px;text-align:center;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 50px rgba(212,175,55,.25)}
+.card::after{content:'';position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.card .ic{width:68px;height:68px;margin:0 auto 14px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;background:radial-gradient(circle at 30% 30%,#2c3ab5,#0a104d);border:1.5px solid var(--gold);box-shadow:0 0 20px rgba(212,175,55,.3)}
+.card h3{font-size:19px;margin-bottom:6px} .card p{font-size:14px;color:#c2c8ea} .card .price{margin-top:12px;color:var(--gold-light);font-weight:800}
+/* steps + stats */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px}
+.step{display:flex;gap:14px;margin-bottom:18px}
+.num{width:42px;height:42px;flex-shrink:0;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#1a1400;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;text-align:center}
+.stat{background:linear-gradient(180deg,#1a2378,#0a104d);border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:20px}
+.stat b{font-size:30px;color:var(--gold-light);display:block}
+/* testimonials */
+.testi{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.testi{grid-template-columns:1fr}}
+.t{background:rgba(255,255,255,.05);border-radius:18px;padding:22px;border:1px solid rgba(255,255,255,.1)}
+.t .stars{color:var(--gold-light);margin-bottom:8px}
+.t small{color:var(--muted)}
+/* CTA */
+.cta-big{max-width:1100px;margin:20px auto;padding:40px 30px;text-align:center;background:radial-gradient(circle at 50% 0%, #26329e 0%, #0d144d 60%, #070b2e 100%);border:2px solid var(--gold);border-radius:28px;box-shadow:0 0 60px rgba(212,175,55,.35);position:relative;overflow:hidden}
+.cta-big h2{font-size:clamp(24px,4vw,38px);font-weight:900;margin-bottom:8px}
+.whats{display:inline-flex;background:#22c55e;color:white;font-weight:800;padding:14px 36px;border-radius:50px;font-size:18px;margin-top:18px;box-shadow:0 10px 30px rgba(34,197,94,.5);gap:10px;align-items:center}
+footer{border-top:1px solid rgba(212,175,55,.2);padding:26px 20px;text-align:center;color:var(--muted);font-size:14px;margin-top:30px}
+.float-whats{position:fixed;bottom:20px;left:20px;width:60px;height:60px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 10px 30px rgba(0,0,0,.5);z-index:99}
+</style>
+</head>
+<body>
+<div class="pattern"></div>
+<nav><div class="nav-inner">
+<div class="logo"><div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div><div>حلول واجبات<div><small>لطلاب الجامعات السعودية</small></div></div></div>
+<div class="links"><a href="#">الرئيسية</a><a href="#services">خدماتنا</a><a href="#steps">طريقة الطلب</a><a href="#reviews">آراء الطلاب</a><a href="#">تواصل</a></div>
+<a class="btn-gold" href="https://wa.me/966500000000"><i class="fa-brands fa-whatsapp"></i> اطلب الآن</a>
+</div></nav>
+
+<div class="hero">
+<div>
+<div class="badge"><span class="dot"></span> متاحين 24/7 • تسليم قبل الموعد • سريّة تامة</div>
+<h1><span class="gold">حلول واجبات</span><br>أبحاث • اختبارات</h1>
+<p class="sub">لطلاب وطالبات <strong>الجامعات السعودية</strong> — حلول أكاديمية احترافية، أبحاث موثقة، تحضير للاختبارات، مشاريع تخرج، بجودة مضمونة وأسعار طلابية.</p>
+<div class="features-mini">
+<div class="mini"><i class="fa-solid fa-check"></i> خالٍ من الانتحال Turnitin</div>
+<div class="mini"><i class="fa-solid fa-check"></i> خبراء ماجستير ودكتوراه</div>
+<div class="mini"><i class="fa-solid fa-check"></i> دعم واتساب فوري</div>
+</div>
+<div class="cta-row">
+<a class="btn-gold" href="https://wa.me/966500000000"><i class="fa-brands fa-whatsapp"></i> تواصل واتساب</a>
+<a class="btn-outline" href="#services">استكشف الخدمات</a>
+</div>
+<div class="trust"><div><b>+8500</b> طالب وطالبة</div><div><b>4.9/5</b> ⭐ تقييم عملائنا</div><div><b>100%</b> التزام بالموعد</div></div>
+</div>
+
+<div class="visual">
+<div class="neon-circle"></div>
+<div class="desk-card">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><b>لوحة الطالب</b><span style="font-size:12px;background:#22c55e22;color:#4ade80;border:1px solid #22c55e55;padding:3px 12px;border-radius:20px">● جاهز للتسليم</span></div>
+<div class="laptop"><div class="laptop-screen">
+<div class="bar" style="width:60%"></div><div class="bar" style="width:90%;opacity:.5"></div>
+<div style="display:flex;gap:10px;margin-top:10px"><div style="flex:1;background:linear-gradient(135deg,#22c55e,#15803d);border-radius:10px;padding:10px;text-align:center;font-weight:800">A+<br><small>ممتاز</small></div><div style="flex:2;background:rgba(255,255,255,.06);border-radius:10px;padding:10px;font-size:12px">بحث جاهز: إدارة الأعمال<br><span style="color:#4ade80">✔ تم فحص الاقتباس 3%</span></div></div>
+<div class="chart"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:85%"></span><span style="height:70%"></span><span style="height:95%"></span><span style="height:60%"></span></div>
+</div></div>
+<div style="display:flex;gap:10px;margin-top:12px"><div style="flex:1;background:#fff;color:#111;border-radius:10px;padding:10px;font-size:12px;font-weight:700">📄 الواجب الأسبوعي<br><small style="color:green">تم الحل ✔</small></div><div style="flex:1;background:#0a0f35;border:1px solid #ffffff22;border-radius:10px;padding:10px;font-size:12px">🖊️ اختبار قصير<br><small style="color:var(--gold-light)">غداً 9 صباحاً</small></div></div>
+</div>
+<div class="float1"><i class="fa-solid fa-file-lines"></i><div>أبحاث موثقة APA<br><small style="color:#4ade80">تسليم PDF + Word</small></div></div>
+<div class="float2"><i class="fa-solid fa-calculator"></i><div>حل مسائل + إحصاء<br><small>خطوات مفصلة</small></div></div>
+<div class="float3"><i class="fa-solid fa-shield-halved"></i><div>ضمان التعديل مجاناً</div></div>
+</div>
+</div>
+
+<div class="unis"><marquee behavior="scroll" direction="right"><span>🎓 جامعة الملك سعود</span><span>🎓 جامعة الملك عبدالعزيز</span><span>🎓 جامعة الإمام</span><span>🎓 جامعة الأميرة نورة</span><span>🎓 جامعة الملك فهد</span><span>🎓 جامعة طيبة</span><span>🎓 جامعة القصيم</span><span>🎓 الجامعة السعودية الإلكترونية</span></marquee></div>
+
+<div class="section" id="services">
+<div class="sec-head"><div class="badge">خدماتنا الأكاديمية</div><h2>كل ما يحتاجه <span>الطالب الجامعي</span> في مكان واحد</h2><p>نغطي جميع التخصصات: إدارة، قانون، تربية، هندسة، حاسب، تمريض، إنجليزي وأكثر</p></div>
+<div class="grid4">
+<div class="card"><div class="ic">📚</div><h3>حلول واجبات</h3><p>حل يومي وأسبوعي لجميع المواد مع شرح الخطوات وضمان الدرجة</p><div class="price">ابتداءً من 25 ر.س</div></div>
+<div class="card"><div class="ic">🔬</div><h3>أبحاث وتقارير</h3><p>أبحاث احترافية موثقة APA / MLA خالية من الانتحال مع فحص Turnitin</p><div class="price">ابتداءً من 80 ر.س</div></div>
+<div class="card"><div class="ic">📝</div><h3>اختبارات وكويزات</h3><p>تحضير ومساعدة في الاختبارات القصيرة والنهائية والاختبارات عن بعد</p><div class="price">حسب المادة</div></div>
+<div class="card"><div class="ic">🎓</div><h3>مشاريع تخرج</h3><p>مشروع تخرج كامل + عرض بوربوينت + تدريب على المناقشة</p><div class="price">خصم 20% الآن</div></div>
+</div>
+</div>
+
+<div class="section" id="steps">
+<div class="split">
+<div class="box"><h2 style="margin-bottom:16px">كيف تطلب في <span style="color:var(--gold-light)">3 خطوات؟</span></h2>
+<div class="step"><div class="num">1</div><div><b>أرسل المطلوب واتساب</b><br><small style="color:var(--muted)">صور الواجب أو البحث + الموعد النهائي + جامعتك</small></div></div>
+<div class="step"><div class="num">2</div><div><b>استلم السعر والتأكيد</b><br><small style="color:var(--muted)">رد خلال 10 دقائق + دفع مرن (تحويل / Apple Pay)</small></div></div>
+<div class="step"><div class="num">3</div><div><b>استلم الحل قبل الموعد</b><br><small style="color:var(--muted)">PDF + Word + تعديل مجاني حتى الرضا التام</small></div></div>
+<a class="btn-gold" href="https://wa.me/966500000000">ابدأ الآن — مجاناً الاستشارة</a>
+</div>
+<div class="box"><h2 style="margin-bottom:16px">لماذا يثق فينا طلاب السعودية؟</h2>
+<div class="stats">
+<div class="stat"><b>8+</b> سنوات خبرة</div>
+<div class="stat"><b>45+</b> خبير أكاديمي</div>
+<div class="stat"><b>8500+</b> عميل سعيد</div>
+<div class="stat"><b>32000+</b> مهمة منجزة</div>
+</div>
+<div style="margin-top:14px;background:#22c55e15;border:1px solid #22c55e44;border-radius:12px;padding:12px;font-size:14px">✅ ضمان استرداد + تعديل مجاني غير محدود + سرية بيانات كاملة</div>
+</div>
+</div>
+</div>
+
+<div class="section" id="reviews">
+<div class="sec-head"><h2>آراء <span>طلابنا</span> ⭐⭐⭐⭐⭐</h2></div>
+<div class="testi">
+<div class="t"><div class="stars">★★★★★</div><p>“طلبت بحث لمادة الإدارة وسلموه قبل الموعد بيومين، والدكتورة أعطتني A. شكراً لكم!”</p><small>— نورة العتيبي ، جامعة الأميرة نورة</small></div>
+<div class="t"><div class="stars">★★★★★</div><p>“أفضل قروب حلول واجبات جربته، سريعين على الواتساب وأسعارهم مناسبة للطلاب.”</p><small>— محمد الشمري ، جامعة الملك سعود</small></div>
+<div class="t"><div class="stars">★★★★★</div><p>“ساعدوني في مشروع التخرج كامل مع العرض، واجتزت المناقشة بامتياز.”</p><small>— عبدالله القحطاني ، الجامعة الإلكترونية</small></div>
+</div>
+</div>
+
+<div class="section">
+<div class="cta-big">
+<h2>جاهز تتفوق هذا الترم؟ 🚀</h2>
+<p style="color:#cbd1f2">انضم لقروب حلول واجبات، أبحاث، اختبارات — استشارة مجانية الآن</p>
+<a class="whats" href="https://wa.me/966500000000"><i class="fa-brands fa-whatsapp"></i> انضم عبر واتساب</a>
+<div style="margin-top:12px;font-size:13px;color:var(--muted)">⏰ نرد خلال 10 دقائق • متاحين 24 ساعة • الدفع بعد الاتفاق</div>
+</div>
+</div>
+
+<footer>© 2026 قروب حلول واجبات، أبحاث، اختبارات — لطلاب وطالبات الجامعات السعودية | جميع الحقوق محفوظة 🎓</footer>
+<a class="float-whats" href="https://wa.me/966500000000"><i class="fa-brands fa-whatsapp"></i></a>
+</body>
+</html>
